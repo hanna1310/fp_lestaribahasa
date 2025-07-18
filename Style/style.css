@@ -1,16 +1,78 @@
-/* General Reset */
-* {
-    margin: 10;
-    padding: 10;
-    box-sizing: border-box;
+/* --- Global & Reset Styles --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+body{
+  margin: 0;
+  justify-content: center; /* Pusatkan secara horizontal */
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #fffdf4;
+  color: #343a40;
 }
-main{
-    margin: 20;
-    display: block;
-    unicode-range: isolate;
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
 }
+
+.custom-navbar {
+  padding-left: 80px;
+  padding-right: 80px;
+  background-color: #FAD59A; /* dark */
+}
+
+
+
+.nav-link.active{
+  text-decoration: none;
+font-weight: bold;
+  color: #4B352A !important;
+  position: relative;
+  display: inline-block; 
+}
+
+.nav-link:hover{
+  color:#d3b9ae !important;
+}
+
+H1{
+  font-size: 70;
+}
+
+.btn{
+  border-radius: 20;
+}
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active{
+  background-color: #4B352A !important;
+  border-color: #4B352A !important;
+}
+
+.btn-outline-primary {
+  border-color: #4B352A !important;
+  color: #4B352A !important;
+  border-width: 2px;
+}
+
+.btn-outline-primary:hover {
+  background-color: #4B352A !important;
+  color: white !important;
+   border-width: 2px;
+  border-color: #4B352A !important;
+}
+
 /* Hero Section */
+
 .py-5 {
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
@@ -18,6 +80,23 @@ main{
 .px-4 {
     padding-right: 1.5rem !important;
     padding-left: 1.5rem !important;
+}
+
+/* Footer */
+.footer {
+            background: linear-gradient(145deg, #1a1c23, #242730);
+            color: #ffffff;
+        }
+.footer-img{
+
+}
+
+.footer-title{
+
+}
+
+.social-links a{
+  
 }
 
 @media (min-width: 1200px) {
@@ -39,18 +118,4 @@ main{
     .container, .container-sm {
         max-width: 540px;
     }
-}
-.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-    width: 100%;
-    padding-right: var(--bs-gutter-x, .75rem);
-    padding-left: var(--bs-gutter-x, .75rem);
-    margin-right: auto;
-    margin-left: auto;
-}
-*, ::after, ::before {
-    box-sizing: border-box;
-}
-div {
-    display: block;
-    unicode-bidi: isolate;
 }
