@@ -6,7 +6,27 @@
     <title>Lestari Bahasa - Kontak Kami</title>
     <link rel="stylesheet" href="Style/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-</head>
+
+ <script>
+        function validasi(form){
+            if(form.user.value == ""){
+                alert('Anda belum mengisikan Username!');
+                form.user.focus(); return (false);
+            }  if(form.email.value == ""){
+                alert("Anda belum mengisikan email!");
+                form.pass.focus();
+                return(false);
+            }
+            if(form.pass.value == ""){
+                alert("Anda belum mengisikan Password!");
+                form.pass.focus();
+                return(false);
+            }
+          
+            return (true);
+        }
+    </script>
+  </head>
 <body>
     <header>
 <nav class="navbar navbar-expand-lg custom-navbar" style="padding-left: 60px; padding-right: 60px;">

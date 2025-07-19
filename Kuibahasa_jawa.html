@@ -6,6 +6,16 @@
     <title>Kuis Bahasa Jawa</title>
       <link rel="stylesheet" href="Style/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <script>
+    function validasi(form) {
+      if (!form.soal.value) {
+        alert("Silakan pilih salah satu jawaban terlebih dahulu.");
+        return false;
+      }
+      return true;
+    }
+  </script>
 </head>
 <body>
     <header>
@@ -39,29 +49,89 @@
 </nav>
 </header>
  <img src="Asset/LatihanBahasa.jpg" class="img-fluid">
-  <div>
-        
-        <form action="/action_page.php" method="post">
-            <label for="name">Nama</label>
-            <input type="text" name="nama" id="name" placeholder="nama anda..">
-
-            <label for="eml">Email</label>
-            <input type="email" name="email" id="eml">
-
-            <label for="pwd">Password</label>
-            <textarea name="password" id="pwd"></textarea>
-
-            <input type="checkbox" name="bersedia" value="ya">
-           Ingat akun saya
-    
-            <input type="Submit" value="LOGIN">
-        </form>
-    </div>
  <br>
  <br>
- <div class="container px-4">
+  
+<div class="container d-flex justify-content-center">
+  <div class="form-container">
+ <form action="/Kuisbahasa_jawa.php" method="post" onsubmit="return validasi(this)">
+    <h3>Kuis Bahasa Jawa</h3>
+
+    <!-- Soal 1 -->
+    <p>1. Apa arti kata <strong>"padhang"</strong>?</p>
+    <label><input type="radio" name="soal1" value="a"> a. Gelap</label><br>
+    <label><input type="radio" name="soal1" value="b"> b. Terang</label><br>
+    <label><input type="radio" name="soal1" value="c"> c. Malam</label><br>
+    <label><input type="radio" name="soal1" value="d"> d. Pagi</label><br><br>
+
+    <!-- Soal 2 -->
+    <p>2. Apa arti kata <strong>"adem"</strong>?</p>
+    <label><input type="radio" name="soal2" value="a"> a. Panas</label><br>
+    <label><input type="radio" name="soal2" value="b"> b. Dingin</label><br>
+    <label><input type="radio" name="soal2" value="c"> c. Lembab</label><br>
+    <label><input type="radio" name="soal2" value="d"> d. Hangat</label><br><br>
+
+    <!-- Soal 3 -->
+    <p>3. Kata <strong>"arep"</strong> berarti?</p>
+    <label><input type="radio" name="soal3" value="a"> a. Datang</label><br>
+    <label><input type="radio" name="soal3" value="b"> b. Akan</label><br>
+    <label><input type="radio" name="soal3" value="c"> c. Pergi</label><br>
+    <label><input type="radio" name="soal3" value="d"> d. Duduk</label><br><br>
+
+    <!-- Soal 4 -->
+    <p>4. "Turu" dalam bahasa Indonesia adalah?</p>
+    <label><input type="radio" name="soal4" value="a"> a. Tidur</label><br>
+    <label><input type="radio" name="soal4" value="b"> b. Makan</label><br>
+    <label><input type="radio" name="soal4" value="c"> c. Bangun</label><br>
+    <label><input type="radio" name="soal4" value="d"> d. Duduk</label><br><br>
+
+    <!-- Soal 5 -->
+    <p>5. "Bocah" berarti?</p>
+    <label><input type="radio" name="soal5" value="a"> a. Anak-anak</label><br>
+    <label><input type="radio" name="soal5" value="b"> b. Orang tua</label><br>
+    <label><input type="radio" name="soal5" value="c"> c. Saudara</label><br>
+    <label><input type="radio" name="soal5" value="d"> d. Ibu</label><br><br>
+
+    <!-- Soal 6 -->
+    <p>6. "Kulo" dalam bahasa Indonesia artinya?</p>
+    <label><input type="radio" name="soal6" value="a"> a. Kamu</label><br>
+    <label><input type="radio" name="soal6" value="b"> b. Saya</label><br>
+    <label><input type="radio" name="soal6" value="c"> c. Dia</label><br>
+    <label><input type="radio" name="soal6" value="d"> d. Mereka</label><br><br>
+
+    <!-- Soal 7 -->
+    <p>7. "Mangan" artinya?</p>
+    <label><input type="radio" name="soal7" value="a"> a. Minum</label><br>
+    <label><input type="radio" name="soal7" value="b"> b. Tidur</label><br>
+    <label><input type="radio" name="soal7" value="c"> c. Makan</label><br>
+    <label><input type="radio" name="soal7" value="d"> d. Duduk</label><br><br>
+
+    <!-- Soal 8 -->
+    <p>8. Arti dari "ayo podo sinau" adalah?</p>
+    <label><input type="radio" name="soal8" value="a"> a. Mari kita makan</label><br>
+    <label><input type="radio" name="soal8" value="b"> b. Mari kita tidur</label><br>
+    <label><input type="radio" name="soal8" value="c"> c. Mari kita belajar</label><br>
+    <label><input type="radio" name="soal8" value="d"> d. Mari kita pulang</label><br><br>
+
+    <!-- Soal 9 -->
+    <p>9. "Adus" dalam bahasa Indonesia berarti?</p>
+    <label><input type="radio" name="soal9" value="a"> a. Cuci</label><br>
+    <label><input type="radio" name="soal9" value="b"> b. Tidur</label><br>
+    <label><input type="radio" name="soal9" value="c"> c. Mandi</label><br>
+    <label><input type="radio" name="soal9" value="d"> d. Masak</label><br><br>
+
+    <!-- Soal 10 -->
+    <p>10. "Cepet" artinya?</p>
+    <label><input type="radio" name="soal10" value="a"> a. Pelan</label><br>
+    <label><input type="radio" name="soal10" value="b"> b. Cepat</label><br>
+    <label><input type="radio" name="soal10" value="c"> c. Diam</label><br>
+    <label><input type="radio" name="soal10" value="d"> d. Jauh</label><br><br>
     
- </div>
+    <input type="submit" value="submit">
+    </form>
+  </div>
+
+</div>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 </html>
