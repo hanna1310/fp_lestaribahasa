@@ -9,18 +9,21 @@
 
  <script>
         function validasi(form){
-            if(form.user.value == ""){
-                alert('Anda belum mengisikan Username!');
-                form.user.focus(); return (false);
+            if(form.name.value == ""){
+                alert('Anda belum mengisikan Nama!');
+                form.name.focus(); return (false);
             }  if(form.email.value == ""){
                 alert("Anda belum mengisikan email!");
-                form.pass.focus();
+                form.email.focus();
                 return(false);
             }
-            if(form.pass.value == ""){
-                alert("Anda belum mengisikan Password!");
-                form.pass.focus();
+            if(form.phone.value == ""){
+                alert("Anda belum mengisikan Nomor Telepon!");
+                form.phone.focus();
                 return(false);
+            }if(form.pesan.value == ""){
+              alert("Anda belum mengisikan pesan!");
+              form.phone.focus();
             }
           
             return (true);
@@ -88,17 +91,17 @@
           </ul>
       </div>
        <div class="col-lg-6">
-     <form action="#">
+     <form action="#" onsubmit="return validasi(this)">
       <div class="row">
   <div class="col-md-4">
     <label for="validationCustom01" class="form-label">First name</label>
-    <input type="text" class="form-control" id="validationCustom01" value="Your name" required>
+    <input type="text" class="form-control" id="validationCustom01" placeholder="Default input" name="name" required>
     <div class="valid-feedback">Looks good!</div>
   </div>
 
   <div class="col-md-4">
     <label for="validationCustom02" class="form-label">Email</label>
-    <input type="email" class="form-control" id="validationCustom02" value="Your Email" required>
+    <input type="email" class="form-control" id="validationCustom02" placeholder="Default input"" name="email" required>
     <div class="valid-feedback">Looks good!</div>
   </div>
 
@@ -106,20 +109,20 @@
     <label for="validationCustomUsername" class="form-label">Phone</label>
     <div class="input-group has-validation">
       <span class="input-group-text" id="inputGroupPrepend">+62</span>
-      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" name="phone">
       <div class="invalid-feedback">Please choose a username.</div>
     </div>
   </div>
 </div>
 <br>
 <div class="form-floating">
-  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" name="pesan"></textarea>
   <label for="floatingTextarea2">Comments</label>
 </div>
 <br>
 <br>
 <div class="d-grid gap-2">
-  <button class="btn btn-primary" type="button">Submit</button>
+  <input class="btn btn-primary" type="submit">
   
 </div>
    
