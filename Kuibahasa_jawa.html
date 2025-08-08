@@ -10,7 +10,8 @@
     <script>
     function validasi(form) {
       if (!form.soal.value) {
-        alert("Silakan pilih salah satu jawaban terlebih dahulu.");
+        alert("Soal belum dijawab semua.");
+         form.soal.focus(); return (false);
         return false;
       }
       return true;
@@ -54,80 +55,217 @@
   
 <div class="container d-flex justify-content-center">
   <div class="form-container">
- <form action="/Kuisbahasa_jawa.php" method="post" onsubmit="return validasi(this)">
+ <form action="#" method="post" onsubmit="return validasi(this)">
     <h3>Kuis Bahasa Jawa</h3>
 
     <!-- Soal 1 -->
     <p>1. Apa arti kata <strong>"padhang"</strong>?</p>
-    <label><input type="radio" name="soal1" value="a"> a. Gelap</label><br>
-    <label><input type="radio" name="soal1" value="b"> b. Terang</label><br>
-    <label><input type="radio" name="soal1" value="c"> c. Malam</label><br>
-    <label><input type="radio" name="soal1" value="d"> d. Pagi</label><br><br>
-
-    <!-- Soal 2 -->
-    <p>2. Apa arti kata <strong>"adem"</strong>?</p>
-    <label><input type="radio" name="soal2" value="a"> a. Panas</label><br>
-    <label><input type="radio" name="soal2" value="b"> b. Dingin</label><br>
-    <label><input type="radio" name="soal2" value="c"> c. Lembab</label><br>
-    <label><input type="radio" name="soal2" value="d"> d. Hangat</label><br><br>
-
-    <!-- Soal 3 -->
-    <p>3. Kata <strong>"arep"</strong> berarti?</p>
-    <label><input type="radio" name="soal3" value="a"> a. Datang</label><br>
-    <label><input type="radio" name="soal3" value="b"> b. Akan</label><br>
-    <label><input type="radio" name="soal3" value="c"> c. Pergi</label><br>
-    <label><input type="radio" name="soal3" value="d"> d. Duduk</label><br><br>
-
-    <!-- Soal 4 -->
-    <p>4. "Turu" dalam bahasa Indonesia adalah?</p>
-    <label><input type="radio" name="soal4" value="a"> a. Tidur</label><br>
-    <label><input type="radio" name="soal4" value="b"> b. Makan</label><br>
-    <label><input type="radio" name="soal4" value="c"> c. Bangun</label><br>
-    <label><input type="radio" name="soal4" value="d"> d. Duduk</label><br><br>
-
-    <!-- Soal 5 -->
-    <p>5. "Bocah" berarti?</p>
-    <label><input type="radio" name="soal5" value="a"> a. Anak-anak</label><br>
-    <label><input type="radio" name="soal5" value="b"> b. Orang tua</label><br>
-    <label><input type="radio" name="soal5" value="c"> c. Saudara</label><br>
-    <label><input type="radio" name="soal5" value="d"> d. Ibu</label><br><br>
-
-    <!-- Soal 6 -->
-    <p>6. "Kulo" dalam bahasa Indonesia artinya?</p>
-    <label><input type="radio" name="soal6" value="a"> a. Kamu</label><br>
-    <label><input type="radio" name="soal6" value="b"> b. Saya</label><br>
-    <label><input type="radio" name="soal6" value="c"> c. Dia</label><br>
-    <label><input type="radio" name="soal6" value="d"> d. Mereka</label><br><br>
-
-    <!-- Soal 7 -->
-    <p>7. "Mangan" artinya?</p>
-    <label><input type="radio" name="soal7" value="a"> a. Minum</label><br>
-    <label><input type="radio" name="soal7" value="b"> b. Tidur</label><br>
-    <label><input type="radio" name="soal7" value="c"> c. Makan</label><br>
-    <label><input type="radio" name="soal7" value="d"> d. Duduk</label><br><br>
-
-    <!-- Soal 8 -->
-    <p>8. Arti dari "ayo podo sinau" adalah?</p>
-    <label><input type="radio" name="soal8" value="a"> a. Mari kita makan</label><br>
-    <label><input type="radio" name="soal8" value="b"> b. Mari kita tidur</label><br>
-    <label><input type="radio" name="soal8" value="c"> c. Mari kita belajar</label><br>
-    <label><input type="radio" name="soal8" value="d"> d. Mari kita pulang</label><br><br>
-
-    <!-- Soal 9 -->
-    <p>9. "Adus" dalam bahasa Indonesia berarti?</p>
-    <label><input type="radio" name="soal9" value="a"> a. Cuci</label><br>
-    <label><input type="radio" name="soal9" value="b"> b. Tidur</label><br>
-    <label><input type="radio" name="soal9" value="c"> c. Mandi</label><br>
-    <label><input type="radio" name="soal9" value="d"> d. Masak</label><br><br>
-
-    <!-- Soal 10 -->
-    <p>10. "Cepet" artinya?</p>
-    <label><input type="radio" name="soal10" value="a"> a. Pelan</label><br>
-    <label><input type="radio" name="soal10" value="b"> b. Cepat</label><br>
-    <label><input type="radio" name="soal10" value="c"> c. Diam</label><br>
-    <label><input type="radio" name="soal10" value="d"> d. Jauh</label><br><br>
     
-    <input type="submit" value="submit">
+
+    <div class="form-check">
+  <input class="form-check-input" type="radio" name="soal" id="soalA" value="a">
+  <label class="form-check-label" for="soalA">
+    a. Gelap
+  </label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal" id="soalB" value="b">
+  <label class="form-check-label" for="soalB">
+    b. Terang
+  </label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal" id="soalC" value="c">
+  <label class="form-check-label" for="soalC">
+    c. Malam
+  </label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal" id="soalD" value="d">
+  <label class="form-check-label" for="soalD">
+    d. Pagi
+  </label>
+</div>
+<!-- Soal 2 -->
+<p>2. Lawan kata dari "Panas" adalah?</p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal2" id="soal2b" value="b">
+  <label class="form-check-label" for="soal2b">b. Dingin</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal2" id="soal2c" value="c">
+  <label class="form-check-label" for="soal2c">c. Lembab</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal2" id="soal2d" value="d">
+  <label class="form-check-label" for="soal2d">d. Hangat</label>
+</div>
+<br>
+<!-- Soal 3 -->
+<p>3. Kata <strong>"arep"</strong> berarti?</p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal3" id="soal3a" value="a">
+  <label class="form-check-label" for="soal3a">a. Datang</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal3" id="soal3b" value="b">
+  <label class="form-check-label" for="soal3b">b. Akan</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal3" id="soal3c" value="c">
+  <label class="form-check-label" for="soal3c">c. Pergi</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal3" id="soal3d" value="d">
+  <label class="form-check-label" for="soal3d">d. Duduk</label>
+</div>
+<br>
+
+<!-- Soal 4 -->
+<p>4. "Turu" dalam bahasa Indonesia adalah?</p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal4" id="soal4a" value="a">
+  <label class="form-check-label" for="soal4a">a. Tidur</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal4" id="soal4b" value="b">
+  <label class="form-check-label" for="soal4b">b. Makan</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal4" id="soal4c" value="c">
+  <label class="form-check-label" for="soal4c">c. Bangun</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal4" id="soal4d" value="d">
+  <label class="form-check-label" for="soal4d">d. Duduk</label>
+</div>
+<br>
+
+<!-- Soal 5 -->
+<p>5. "Bocah" berarti?</p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal5" id="soal5a" value="a">
+  <label class="form-check-label" for="soal5a">a. Anak-anak</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal5" id="soal5b" value="b">
+  <label class="form-check-label" for="soal5b">b. Orang tua</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal5" id="soal5c" value="c">
+  <label class="form-check-label" for="soal5c">c. Saudara</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal5" id="soal5d" value="d">
+  <label class="form-check-label" for="soal5d">d. Ibu</label>
+</div>
+<br>
+
+<!-- Soal 6 -->
+<p>6. "Kulo" dalam bahasa Indonesia artinya?</p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal6" id="soal6a" value="a">
+  <label class="form-check-label" for="soal6a">a. Kamu</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal6" id="soal6b" value="b">
+  <label class="form-check-label" for="soal6b">b. Saya</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal6" id="soal6c" value="c">
+  <label class="form-check-label" for="soal6c">c. Dia</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal6" id="soal6d" value="d">
+  <label class="form-check-label" for="soal6d">d. Mereka</label>
+</div>
+<br>
+
+<!-- Soal 7 -->
+<p>7. "Mangan" artinya?</p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal7" id="soal7a" value="a">
+  <label class="form-check-label" for="soal7a">a. Minum</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal7" id="soal7b" value="b">
+  <label class="form-check-label" for="soal7b">b. Tidur</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal7" id="soal7c" value="c">
+  <label class="form-check-label" for="soal7c">c. Makan</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal7" id="soal7d" value="d">
+  <label class="form-check-label" for="soal7d">d. Duduk</label>
+</div>
+<br>
+
+<!-- Soal 8 -->
+<p>8. Arti dari "ayo podo sinau" adalah?</p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal8" id="soal8a" value="a">
+  <label class="form-check-label" for="soal8a">a. Mari kita makan</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal8" id="soal8b" value="b">
+  <label class="form-check-label" for="soal8b">b. Mari kita tidur</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal8" id="soal8c" value="c">
+  <label class="form-check-label" for="soal8c">c. Mari kita belajar</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal8" id="soal8d" value="d">
+  <label class="form-check-label" for="soal8d">d. Mari kita pulang</label>
+</div>
+<br>
+
+<!-- Soal 9 -->
+<p>9. "Adus" dalam bahasa Indonesia berarti?</p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal9" id="soal9a" value="a">
+  <label class="form-check-label" for="soal9a">a. Cuci</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal9" id="soal9b" value="b">
+  <label class="form-check-label" for="soal9b">b. Tidur</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal9" id="soal9c" value="c">
+  <label class="form-check-label" for="soal9c">c. Mandi</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal9" id="soal9d" value="d">
+  <label class="form-check-label" for="soal9d">d. Masak</label>
+</div>
+<br>
+
+<!-- Soal 10 -->
+<p>10. "Cepet" artinya?</p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal10" id="soal10a" value="a">
+  <label class="form-check-label" for="soal10a">a. Pelan</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal10" id="soal10b" value="b">
+  <label class="form-check-label" for="soal10b">b. Cepat</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal10" id="soal10c" value="c">
+  <label class="form-check-label" for="soal10c">c. Diam</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="soal10" id="soal10d" value="d">
+  <label class="form-check-label" for="soal10d">d. Jauh</label>
+</div>
+<br>
+
+    
+    <input class="btn btn-primary" type="submit" value="submit">
     </form>
   </div>
 
